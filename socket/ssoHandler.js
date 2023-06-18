@@ -5,7 +5,7 @@ module.exports = (io, socket) => {
 	socket.on('sso:join', async (socketId) => {
 		socket.join(socketId);
 	});
-
+	// server에서 로그인 했을 경우
 	socket.on('sso:login', async (socketId, token) => {
 		try {
             // console.log('socketId : ', socketId, ' token : ', token);
@@ -21,5 +21,10 @@ module.exports = (io, socket) => {
 		} catch (e) {
 			console.error('ssoHandlre.js error : ', e)
 		}
+	});
+
+	socket.on('sso:logout', async(socketId) => {
+		socket.to(socketId).emit('sso:logout');
 	})
+
 }
