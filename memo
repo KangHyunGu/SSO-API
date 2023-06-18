@@ -1,0 +1,11 @@
+-- socket.io admin-ui 
+    -- document
+        https://socket.io/blog/admin-ui-first-release/
+    
+    -- github using
+        https://github.com/socketio/socket.io-admin-ui/
+
+    -- 비밀번호 매칭확인
+        https://bcrypt-generator.com/
+        pw : abcd1234
+        pw_hash : $2a$12$AmTvDr8qDy3X6Bc5LdAyw./XL7MB/W8XydZPKx.YgFScovItUQf9u
